@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
 :root {
     --cor-texto: #302e2e;
     --cor-destaque: #eabba8;
@@ -9,65 +11,50 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
 }
 
 body {
+    padding-top: 20px;
     background-color: #fff;
-    padding-top: 85px;
     color: var(--cor-texto);
 }
 
-/* navbar */
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 5%;
+    height: 50px;
     background-color: #fff;
     z-index: 1000;
-}
-
-.interface {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-}
-
-.conteudo-principal {
-    animation: fadeIn 0.8s ease-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.nome-logo {
-    display:flex
-}
-
-.nome-logo {
-    font-size: 2rem;
-    font-weight: 620;
-    letter-spacing: 1px;
-}
-
-.nome-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    height: 60px; /* Altura da navbar (ajuste conforme necessário) */
+    transition: box-shadow 0.3s ease-in-out;
 }
-/* menu da navbar */
+
+header .interface {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nome-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background-color: #fff;
+}
+
 .menu {
     display: flex;
     align-items: center;
     gap: 15px;
-    flex-wrap: wrap; 
 }
 
 .menu ul {
@@ -81,9 +68,9 @@ header {
     color: var(--cor-texto);
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.3rem;
     position: relative;
-    padding: 8px 0px;
+    padding: 8px 0;
     transition: all 0.3s ease;
 }
 
@@ -99,27 +86,26 @@ header {
     background: var(--cor-destaque);
     bottom: 0;
     left: 0;
-    transition: width 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .menu a:hover::after {
     width: 100%;
 }
 
-/* botão fale comigo */
 .btn-contato button {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: white; 
-    color: #302e2e; 
+    background-color: white;
+    color: #302e2e;
     padding: 10px 25px;
-    border: 2px solid #eabba8; 
-    border-radius: 30px;
+    border: 2px solid #eabba8;
+    border-radius: 60px;
     font-weight: 600;
-    text-decoration: none;
+    font-size: 17px;
+    cursor: pointer;
     transition: all 0.3s;
-    cursor: pointer
 }
 
 .btn-contato button:hover {
@@ -127,35 +113,41 @@ header {
     transform: translateY(-3px);
 }
 
-
-@media (max-width: 768px) {
-    header {
-        padding: 15px 5%;
-    }
-    
-    .nome-logo {
-        font-size: 1.5rem;
-    }
-    
-    
-    .menu ul {
-        gap: 30px;
-        margin-right: 20px;
-    }
-    
-    .btn-contato button {
-        padding: 10px 25px;
-    }
-}
-
-/* estilização da main */
 .sobre {
     padding: 80px 10%;
     background-color: #ffffff;
 }
 
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 200px;
+}
+
+.imagem-gihbli img {
+    border-radius: 50%;
+    max-width: 400px;
+    height: auto;
+}
+
+.conteudo-principal {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .titulo-destaque h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
     color: #302e2e;
@@ -168,11 +160,13 @@ header {
 }
 
 .texto-descricao p {
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 1.3rem;
+    line-height: 1.3;
     color: var(--cor-texto);
     margin-bottom: 25px;
     max-width: 800px;
+    text-align: justify;
+
 }
 
 .tecnologias {
@@ -181,140 +175,198 @@ header {
     gap: 15px;
     margin: 20px 0;
     list-style: none;
+    padding: 0;
 }
 
 .tecnologias li {
-    background-color: #fff;
+    border: none;
+    background-color: transparent;
     padding: 8px 15px;
-    border-radius: 20px;
     font-weight: 600;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     color: #302e2e;
 }
 
-.tecnologias li:hover {
-    background-color: #eabba8;
-    color: white;
+.tecnologias li:hover img {
+    transform: translateY(-3px);
+    transition: all 0.2s ease-in-out;
 }
 
 .botoes-contato {
     display: flex;
     gap: 20px;
     margin-top: 40px;
-    text-decoration: none;
+    flex-wrap: wrap;
 }
 
-.btn-curriculo {
+.btn-curriculo,
+.btn-rede-social {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: white; 
-    color: #302e2e; 
     padding: 12px 25px;
-    border: 2px solid #eabba8; 
     border-radius: 30px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s;
+}
+
+.btn-curriculo {
+    background-color: white;
+    color: #302e2e;
+    border: 2px solid #eabba8;
 }
 
 .btn-rede-social {
     background-color: #302e2e;
     color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: all 0.3s;
 }
 
 .btn-curriculo:hover,
 .btn-rede-social:hover {
     transform: translateY(-3px);
-   box-shadow: 0 5px 20px var(--cor-sombra);
+    box-shadow: 0 5px 20px var(--cor-sombra);
 }
 
 .linha-divisoria {
-    border-top: 2px dashed #eabba8;  
-    margin: 40px -150px;                 
-    opacity: 0.6;
-    width: calc(100% + 200px);  
-}
-                
-/* alinhamento da img com flexbox*/
-.flex-container {
-    display: flex;
-    align-items: flex-start; 
-    gap: 200px; 
+    border-top: 3px dashed #eabba8;
+    margin: 40px 0;
+    opacity: 0.2;
+    text-align: center;
 }
 
-
-.imagem-gihbli {
-    margin-top: 30px; 
+.projetos {
+    font-size: 1.1rem;
+    font-weight: 620;
+    color: var(--cor-texto);
+    margin-bottom: 90px;
+    text-align: center;
 }
 
-.titulo-destaque h1 {
-    margin-top: 0; 
-    padding-top: 20px; 
+/*ESTILO BOTÃO HAMBÚRGUER*/
+.hamburger-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    z-index: 1001;
 }
-  
+
+.hamburger-btn .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-texto);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Quando o menu está aberto (.active) → vira um X */
+.hamburger-btn.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-btn.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
 
 @media (max-width: 768px) {
-    .titulo-destaque h1 {
-        font-size: 2.2rem;
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
     }
-    
+
+    .nome-logo {
+        font-size: 1.8rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70vw;
+        height: 40vh;
+        padding-top: 50px;
+        background-color: #fff;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.active ul {
+        flex-direction: column;
+        gap: 20px;
+        margin: 0px;
+        text-align: right;
+    }
+
+    .titulo-destaque h1 {
+        font-size: 2.5rem;
+    }
+
+    .imagem-gihbli img {
+        max-width: 250px;
+    }
+
     .botoes-contato {
         flex-direction: column;
         gap: 15px;
+        align-items: center;
     }
-    
-    .imagem-gihbli {
-        flex-direction:row-reverse;
-        flex: 1;
+
+    .tecnologias {
+        justify-content: center;
     }
-    
-    .texto-sobre {
-        flex: 1;
-        max-width: 600px;
+
+    .botoes-contato {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 20px 0;
+        padding: 15px;
+
     }
-    
-    .imagem-gihbli img{
-        width: 50%;
-        max-width: 500px;
-        border-radius: 5px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    .btn-curriculo,
+    .btn-rede-social {
+
+        width: 220px
     }
-    
-    .imagem-gihbli {
-        margin-right: 0px;
-        margin-left: 90px;
-    }
-    
-    .imagem-gihbli .texto-sobre,
-    .imagem-gihbli .tecnologias,
-    .imagem-gihbli .botoes-contato {
-        text-align: right;
-        justify-content: flex-end;
-    }
-    
-    @media (max-width: 768px) {
-        .imagem-gihbli {
-            order: -1;
-            margin: 0 0 40px 0 !important;
-        }
-        
-        .texto-sobre,
-        .tecnologias,
-        .botoes-contato {
-            text-align: center !important;
-            justify-content: center !important;
-        }
+
+    .interface {
+        margin-top: -55px;
     }
 }
+    @media (max-width: 768px) {
 
-
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+        /* TENTE ESTA VERSÃO MAIS ESPECÍFICA */
+        .texto-descricao .saudacao {
+          text-align: center;
+        }
+      
+      }

@@ -5,65 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Meu Portfólio</title>
-    
 </head>
 <body>
     <header>
         <div class="interface">
             <div class="nome-logo">
-                <span class="Nome">Francielly Nunes</span>
+                <a href="#" style="text-decoration: none; color: inherit;">
+                    <span class="Nome">Francielly Nunes
+                        <i class="fa-solid fa-code"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="hamburger-btn" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
 
             <nav class="menu">
                 <ul>
+                    <li><a href="#">Início</a></li>
                     <li><a href="#">Projetos</a></li>
                     <li><a href="#">Habilidades</a></li>
                 </ul>
-                <div class="btn-contato">
-                    <button>Fale comigo!</button>
-                </div>
+        <div class="btn-contato">
+                    <a href="#" class="btn-contato">Fale comigo!</a>
+        </div>
             </nav>
         </div>
     </header>
 
-        <main class="sobre">
-            <div class="interface">
-                <div class="flex-container">
-                    <div class="imagem-gihbli">
-                    <img src="images/teste logo.png" alt="imagem-gihbli" width="400" height="400"> </div>
+    <main class="sobre">
+        <div class="interface">
+            <div class="flex-container">
+                <div class="imagem-gihbli">
+                    <img src="images/teste logo.png" alt="imagem-gihbli">
+                </div>
                 <div class="conteudo-principal">
                     <div class="titulo-destaque">
-                        <h1>DESENVOLVEDORA <span> não faço ideia lorem</span></h1> </div>
+                        <h1>BACK-END <span> Developer.</span></h1>
+                    </div>
                     <div class="texto-descricao">
-                        <p>Sou uma Dev em aprendizado contínuo pipipi popopo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, suscipit aliquam. Iure quos amet itaque. Dolor, impedit! Omnis enim illum qui. Recusandae quasi vitae enim provident cum, magni aspernatur quaerat.</p>
+                        <p class="saudacao">Olá, eu sou a Francielly!</p>
+                        <p>Encontrei no back-end o meu lugar para criar sistemas que não apenas funcionam, mas que são seguros, rápidos e confiáveis.</p>
+
+                            <p>Utilizando C# e Python como minhas principais ferramentas para desenvolver a lógica de negócio, e SQL para garantir a integridade e a velocidade de acesso aos dados. Minha capacidade de transitar entre o back-end e o front-end (HTML, CSS, JS) me ajuda a visualizar o impacto do meu trabalho na experiência do usuário final.</p>
+
+                            <p>Explore meus projetos abaixo para ver um pouco do que eu amo construir e sinta-se à vontade para entrar em contato!</p>
                         
                         <h2>Hard Skills</h2>
                         <ul class="tecnologias">
-                            <li>tech 1</li>
-                            <li>tech 1</li>
-                            <li>tech 1</li>
-                            <li>tech 1</li>
-                        
+                            <li><img src="images/python.png" alt="icone-python" width="40" height="40"></li>
+                            <li><img src="images/c-sharp.png" alt="icone-c#" width="40" height="40"></li>
+                            <li><img src="images/sql-server.png" alt="icone-sql" width="40" height="40"></li>
+                            <li><img src="images/js.png" alt="icone-html" width="40" height="40"></li>
+                            <li><img src="images/html-5.png" alt="icone-html" width="40" height="40"></li>
+                            <li><img src="images/css-3.png" alt="icone-html" width="40" height="40"></li>
                         </ul>
                     </div>
                     
                     <div class="botoes-contato">
                         <a href="#" class="btn-curriculo">
                             <i class="fas fa-download"></i> Download CV</a>
-                        <a href="#" class="btn-rede-social"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="#" class="btn-rede-social"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/FranNuness" class="btn-rede-social"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/frande-oliveira1/" class="btn-rede-social"><i class="fab fa-linkedin"></i> LinkedIn</a>
                     </div>
                     <div class="linha-divisoria"></div>
-            <div class="Projetos">
-                <h1>Projetos</h1>
-
+                    <div class="projetos">
+                        <h1>Projetos</h1>
+                    </div>
+                </div>
             </div>
-            
-        
+        </div>
     </main>
+    
+    <script src="script.js">
+</script>
 </body>
 </html>
