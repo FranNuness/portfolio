@@ -1,0 +1,91 @@
+@media (max-width: 768px) {
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .nome-logo {
+        font-size: 1.8rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70vw;
+        height: 40vh;
+        padding-top: 50px;
+        background-color: #fff;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.active ul {
+        flex-direction: column;
+        gap: 20px;
+        margin: 0px;
+        text-align: right;
+    }
+
+    .titulo-destaque h1 {
+        font-size: 2.5rem;
+    }
+
+    .imagem-gihbli img {
+        max-width: 250px;
+    }
+
+    .botoes-contato {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .tecnologias {
+        justify-content: center;
+    }
+
+    .botoes-contato {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 20px 0;
+        padding: 15px;
+
+    }
+
+    .btn-curriculo,
+    .btn-rede-social {
+
+        width: 220px
+    }
+
+    .interface {
+        margin-top: -55px;
+    }
+}
+    @media (max-width: 768px) {
+        .texto-descricao .saudacao {
+          text-align: center;
+        }
+      
+      }

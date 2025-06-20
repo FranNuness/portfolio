@@ -1,0 +1,10 @@
+.projetos {
+    font-size: 1.1rem;
+    font-weight: 620;
+    color: var(--cor-texto);
+    margin-bottom: 90px;
+    margin-left: 0;
+    text-align:left;
+    padding-left: 15%;
+    
+}
