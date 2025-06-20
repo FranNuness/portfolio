@@ -1,4 +1,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+html {
+    scroll-behavior: smooth;
+}
 
 :root {
     --cor-texto: #302e2e;
@@ -10,7 +13,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:content-box;
     font-family: "Fira Sans", sans-serif;
     font-weight: 400;
 }
@@ -38,10 +41,13 @@ header .interface {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 8%;
+    padding-right: 15%;
+   
 }
 
 
@@ -49,6 +55,11 @@ header .interface {
     font-size: 1.8rem;
     font-weight: 700;
     background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align:left;
+    padding-left: 
 }
 
 .menu {
@@ -229,7 +240,7 @@ header .interface {
 
 .linha-divisoria {
     border-top: 3px dashed #eabba8;
-    margin: 40px 0;
+    margin: 45px 0;
     opacity: 0.2;
     text-align: center;
 }
@@ -239,7 +250,10 @@ header .interface {
     font-weight: 620;
     color: var(--cor-texto);
     margin-bottom: 90px;
-    text-align: center;
+    margin-left: 0;
+    text-align:left;
+    padding-left: 15%;
+    
 }
 
 /*ESTILO BOTÃO HAMBÚRGUER*/
@@ -363,8 +377,6 @@ header .interface {
     }
 }
     @media (max-width: 768px) {
-
-        /* TENTE ESTA VERSÃO MAIS ESPECÍFICA */
         .texto-descricao .saudacao {
           text-align: center;
         }
